@@ -17,4 +17,5 @@ public class Potentiometer extends AnalogInput {
     public int getPort(){
         return m_port;
     }
+    public void doActions(){}
 }

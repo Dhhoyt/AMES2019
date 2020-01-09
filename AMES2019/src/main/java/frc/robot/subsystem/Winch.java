@@ -1,21 +1,20 @@
 package frc.robot.subsystem;
-import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.can.*;
 import frc.robot.biblioteca.*;
 
 class Winch extends RoboBaseClass {
-    public TalonSRX winchMotor;
+    public Motor winchMotor;
     private double speed;
-    public Winch(int winchMotorPort) {
+    public Winch(Motor motor) {
         super();
-        winchMotor = new TalonSRX(winchMotorPort);
+        winchMotor = motor;
     }
     @Override
     public void gatherInfo() {
+        
     }
     @Override
     public void doActions() {
-        winchMotor.set(ControlMode.PercentOutput, speed);
+        winchMotor.set(speed);
     }
     public void setSpeed(double s) {
         speed = s;

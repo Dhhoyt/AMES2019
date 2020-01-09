@@ -1,7 +1,7 @@
 package frc.robot.biblioteca;
 import frc.robot.biblioteca.RoboBaseClass;
 
-class DigitalOutput extends RoboBaseClass {
+abstract class DigitalOutput extends RoboBaseClass {
     private boolean m_currentValue;
     public DigitalOutput(boolean initValue) {
         super();
@@ -13,4 +13,5 @@ class DigitalOutput extends RoboBaseClass {
     public void setValue(boolean value) {
         m_currentValue = value;
     }
+    
 }

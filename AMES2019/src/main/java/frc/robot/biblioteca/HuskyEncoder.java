@@ -51,4 +51,5 @@ public class HuskyEncoder extends AnalogInput{
     public void gatherInfo() {
         setValue(m_encoder.get());
     }
+    public void doActions(){}
 }

@@ -1,7 +1,7 @@
 package frc.robot.biblioteca;
 import frc.robot.biblioteca.RoboBaseClass;
 
-class HuskyDigIn extends RoboBaseClass {
+abstract class HuskyDigIn extends RoboBaseClass {
     private boolean m_currentValue;
     public HuskyDigIn(boolean initValue) {
         super();

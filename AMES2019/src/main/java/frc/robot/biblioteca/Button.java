@@ -18,4 +18,5 @@ public class Button extends HuskyDigIn {
     public int getPort(){
         return m_port;
     }
+    public void doActions(){}
 }
