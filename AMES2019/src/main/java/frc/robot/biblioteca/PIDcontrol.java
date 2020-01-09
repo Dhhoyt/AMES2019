@@ -59,6 +59,10 @@ public class PIDcontrol extends RoboBaseClass{
     public double getActual(){
         return m_actual;
     }
+    public void reset(){
+        m_active = false;
+        m_totalError = 0;
+    }
     @Override
     public void doActions(){
         if(m_active){
@@ -70,6 +74,7 @@ public class PIDcontrol extends RoboBaseClass{
             pOutput = m_P * m_error;
             iOutput = m_I * m_totalError;
             dOutput = -m_D * (m_actual - m_lastActual);
+            m_lastActual = m_actual;
             m_output = m_Coeff * (pOutput + iOutput + dOutput);
         }
     }
